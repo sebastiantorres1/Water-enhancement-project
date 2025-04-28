@@ -1,6 +1,6 @@
 # Water removal process for underwater images
 
-## Requisitos
+## Requirements
 
 - One RGB underwater image
 - One depth map
