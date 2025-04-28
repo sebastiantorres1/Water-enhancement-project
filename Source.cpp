@@ -44,45 +44,6 @@ using namespace cv;
 int var = 90;
 
 
-/*start_index
-345353
-start_index
-236669
-start_index
-93553
-start_index
-105595
-start_index
-9372
-start_index
-10201
-start_index
-37597
-start_index
-17904
-16454
-start_index
-10141
-27220
-start_index
-2042
-6082
-start_index
-1032
-3366
-start_index
-1097
-138
-start_index
-256
-554
-start_index
-490
-2147
-start_index
-8
-13*/
-
 void visualize_nmap(const cv::Mat& nmap){
 	//void visualize_nmap(const cv::Mat & nmap)
 	
@@ -1732,18 +1693,14 @@ int main() {
 
 	float args[] = {f,l,p,min_depth,max_depth,spread_data_fraction,size,monodepth,monodepth_add_depth,monodepth_add_depth,monodepth_multiply_depth};
 
-	//cameras and depth image input
-	//std::string Input_im_name = "real48_image.png";
-	//std::string depth_map_name = "48_Depth_map.png";
-
 	
 	std::string cadena_img = "cutter" + std::to_string(var) + ".png";
 	std::string cadena_depth = "cutter" + std::to_string(var) + "_depth_map.png";
 	std::cout << cadena_img << endl;
 	std::cout << cadena_depth << endl;
 
-	std::string Input_im_name = cadena_img;        // "cutter2.png";
-	std::string depth_map_name = cadena_depth;     //"cutter2_depth_map.png";
+	std::string Input_im_name = cadena_img;        
+	std::string depth_map_name = cadena_depth;     
 
 	auto img_depth_map = load_image_and_depth_map(Input_im_name, depth_map_name, size);
 	cv::Mat img = img_depth_map.first;
